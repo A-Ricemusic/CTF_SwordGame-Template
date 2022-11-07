@@ -34,7 +34,6 @@ end
 
 
 function EventService:OnCharacterAddedFireClient(player)
-    print("Fired")
     self:FireClient("OnCharacterAdded",player)
 end
 

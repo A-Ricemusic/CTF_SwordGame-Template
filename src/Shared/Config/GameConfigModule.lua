@@ -13,7 +13,7 @@ GameConfigModule.REQUIRE_RETURN_BEFORE_CAP = true
 GameConfigModule.FLAG_RESPAWN_TIME = 3 -- Seconds
 GameConfigModule.RETURN_FLAG_ON_DROP = true
 GameConfigModule.FLAG_RETURN_ON_TOUCH = true
-GameConfigModule.INTERMISSION_DURATION = 45 -- Seconds
+GameConfigModule.INTERMISSION_DURATION = 15 -- Seconds
 GameConfigModule.END_GAME_WAIT = 10 -- Seconds
 GameConfigModule.RESPAWN_TIME = 5 -- Seconds
 

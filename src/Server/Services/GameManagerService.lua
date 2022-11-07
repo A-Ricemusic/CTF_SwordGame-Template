@@ -43,6 +43,11 @@ function GameManagerService:LoadPlayerManagerService()
     return PlayerManagerService
 end
 
+function GameManagerService:LoadTaggingService()
+	local TaggingService = self.Services.TaggingService
+    return TaggingService
+end
+
 function GameManagerService:LoadTimeManagerService()
     local TimeManagerService = self.Services.core.TimeManagerService
     return TimeManagerService 
@@ -149,11 +154,12 @@ function GameManagerService:StartRound()
 	local PlayerManagerService = GameManagerService:LoadPlayerManagerService()
 	local TeamManagerService = GameManagerService:LoadTeamManagerService()
 	local MapManagerService = GameManagerService:LoadMapManagerService()
+	local TaggingService = GameManagerService:LoadTaggingService()
 	MapManagerService:GetSelectedMap()
 	GameManagerService:MakeFlags()
 	TeamManagerService:ClearTeamScores()
 	PlayerManagerService:ClearPlayerScores()
-	
+	TaggingService:OnStart()
 	PlayerManagerService:AllowPlayerSpawn(true)
 	PlayerManagerService:LoadPlayers()
 	

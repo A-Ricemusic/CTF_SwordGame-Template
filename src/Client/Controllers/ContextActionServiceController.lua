@@ -25,9 +25,7 @@ local StartJumpHeight = game.StarterPlayer.CharacterJumpHeight
 local StartJumpPower = game.StarterPlayer.CharacterJumpPower
 local Anim = Instance.new("Animation")
 Anim.Parent = script  
-local Character = player.Character
-task.wait(5)
-print("CharacteraddedContextActionController")    
+local Character = player.Character  
 local Humanoid = Character:WaitForChild("Humanoid")
 local RightHand = Character:WaitForChild("RightHand")
 Humanoid.WalkSpeed = StartWalkSpeed
