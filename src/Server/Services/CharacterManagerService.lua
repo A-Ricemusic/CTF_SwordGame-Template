@@ -8,6 +8,9 @@ local BackflipConfig = {['ForcefieldTimer'] = 0.3,['DebrisTime'] = 0.5,['Force']
 local DoubleJumpConfig = {['Force'] = Vector3.new(0,2,0),['DebrisTime'] = 0.2,}
 local debris = game:GetService("Debris")
 local StartJumpPower = game.StarterPlayer.CharacterJumpPower
+
+
+
 function CharacterManagerService.Client:Backflip(Player,StartWalkSpeed,StartJumpHeight)
 local Character = Player.Character
 local Humanoid = Character:FindFirstChildOfClass("Humanoid")

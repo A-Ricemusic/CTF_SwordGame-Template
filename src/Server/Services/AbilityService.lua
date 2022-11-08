@@ -22,7 +22,6 @@ function AbilityService.Client:FastRun(Player, WeaponConfig)
 end
 
 function AbilityService.Client:ForceField(Player, WeaponConfig)
-
     local Character = Player.Character
     local Aura = game:GetService("ReplicatedStorage").Effects.ForceField.ForceFieldAttachment:Clone()
    local ForceField = Instance.new("ForceField")

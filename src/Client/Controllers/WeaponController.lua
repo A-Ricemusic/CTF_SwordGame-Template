@@ -35,6 +35,7 @@ RightHand.ChildAdded:Connect(function(Weapon)
     local Humanoid = Player.Character:FindFirstChildOfClass("Humanoid")  
     Humanoid.WalkSpeed = Walk
     Humanoid.JumpHeight = Jump
+    
 local function Ability(ActionName,input)
         if ActionName == "Ability" and input == Enum.UserInputState.Begin and tick() - LastAbility >= WeaponConfig.AbilityCooldown then      
             LastAbility = tick()

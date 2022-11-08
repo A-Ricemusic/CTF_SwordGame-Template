@@ -211,9 +211,9 @@ function GameManagerService:RoundCleanup()
 	MapManagerService:LoadMap()
 end
 
-
+--main 
 function GameManagerService:Start()
-	task.wait(5)
+task.wait(5)
 GameManagerService:Initialize()
 task.wait(2)
 game.Players.PlayerAdded:Connect(function(player)

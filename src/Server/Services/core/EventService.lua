@@ -9,7 +9,6 @@ local EventService = {Client = {}}
 
 
 function EventService:DisplayIntermissionFireClient(player,display)
-    --IsIntermission is a boolean
     self:FireClient("DisplayIntermission",player,display)
 end
 
