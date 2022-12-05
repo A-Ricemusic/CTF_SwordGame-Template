@@ -24,14 +24,14 @@ HeavySwordWeaponConfig.HumanoidToKill = ("Humanoid")
 	HeavySwordWeaponConfig.ComboResetTimer = 4
 	HeavySwordWeaponConfig.HitBoxSize = Vector3.new(15,3,10)
 	HeavySwordWeaponConfig.AbilityName = "ForceField"
-	HeavySwordWeaponConfig.Description = "Heavy Weight Sword, Ability: Invincible for "..tostring(HeavySwordWeaponConfig.AbilityDebrisTimer).." Seconds, Cooldown: "..tostring(HeavySwordWeaponConfig.AbilityCooldown)
+	HeavySwordWeaponConfig.Description = "Heavy Weight Sword, Ability: Avida's Aura (Gives player invincibility for a short time, allows player to walk on air in certain places)"
 	-- Animations & Sounds
 	HeavySwordWeaponConfig.SwingAnimations = {
-        'rbxassetid://9991697436', --1
+        'rbxassetid://9991378000', --1
 		'rbxassetid://9991581812', --2
         'rbxassetid://9991697436', --3
-        'rbxassetid://9991378000', --4
-        'rbxassetid://9991581812', --5
+        'rbxassetid://9991581812', --4
+        'rbxassetid://9991697436', --5
     }
 	HeavySwordWeaponConfig.Textures = { -- Slash
 	'rbxassetid://8821193347', --1

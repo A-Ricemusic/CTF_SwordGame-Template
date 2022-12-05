@@ -25,16 +25,17 @@ BlazeSwordWeaponConfig.HumanoidToKill = ("Humanoid")
 	BlazeSwordWeaponConfig.ComboResetTimer = 3
 	BlazeSwordWeaponConfig.HitBoxSize = Vector3.new(12,3,7)
 	BlazeSwordWeaponConfig.AbilityName = "Projectile"
-	BlazeSwordWeaponConfig.Description = "Medium Weight Sword, Ability: Heavy Fireball with BaseDamage: "..tostring(BlazeSwordWeaponConfig.AbilityDamage)..", Cooldown: "..tostring(BlazeSwordWeaponConfig.AbilityCooldown)
+	BlazeSwordWeaponConfig.Description = "Heavy Weight Sword, Ability: Aniba's Wrath (Shoots a big fireball)"
 
 	-- Animations & Sounds
 	BlazeSwordWeaponConfig.SwingAnimations = {
-        'rbxassetid://9991697436', --1
-		'rbxassetid://9991697436', --2
-        'rbxassetid://9991581812', --3
-        'rbxassetid://9991378000', --4
-        'rbxassetid://9991581812', --5
+        'rbxassetid://9991378000', --1
+		'rbxassetid://9991581812', --2
+        'rbxassetid://9991697436', --3
+        'rbxassetid://9991581812', --4
+        'rbxassetid://9991697436', --5
     }
+	
 	BlazeSwordWeaponConfig.Textures = { -- Slash
 	'rbxassetid://8821193347', --1
 	'rbxassetid://8821230983', --2

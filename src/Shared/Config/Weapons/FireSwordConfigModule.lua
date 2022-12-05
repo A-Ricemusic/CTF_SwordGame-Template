@@ -24,7 +24,7 @@ FireSwordWeaponConfig.HumanoidToKill = ("Humanoid")
 	FireSwordWeaponConfig.ComboResetTimer = 1.2
 	FireSwordWeaponConfig.HitBoxSize = Vector3.new(15,5,10)
 	FireSwordWeaponConfig.AbilityName = "Projectile"
-	FireSwordWeaponConfig.Description = "Lightweight and versitile sword, Ability: Fire Ball with BaseDamage: "..tostring(FireSwordWeaponConfig.AbilityDamage)..", Cooldown: "..tostring(FireSwordWeaponConfig.AbilityCooldown)
+	FireSwordWeaponConfig.Description = "Medium Weight Sword, Ability: Aniba's Fire (Shoots a big fireball)"
 
 	-- Animations & Sounds
 	FireSwordWeaponConfig.SwingAnimations = {

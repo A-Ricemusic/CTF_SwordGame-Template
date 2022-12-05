@@ -239,7 +239,7 @@ local WeaponsService = {Client = {}}
 						if not RightHand then return end
 						local GameItem = FindGameItem(RightHand)
 						if GameItem ~= nil then
-								return CreateObject(PrimaryPart,"please sell your current sword")
+								GameItem:Destroy()
 						end
 						CreateObject(PrimaryPart, "successful purchase")
 						WeaponsService.Client:SwordSetUp(player,SwordPawn.Name)

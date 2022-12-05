@@ -12,7 +12,7 @@ ShortSwordWeaponConfig.HumanoidToKill = ("Humanoid")
 	ShortSwordWeaponConfig.JumpHeight = 15
 	ShortSwordWeaponConfig.MaxDamage = 5 * mult
 	ShortSwordWeaponConfig.MinDamage = 3 * mult
-	ShortSwordWeaponConfig.AbilityRunSpeed = 30
+	ShortSwordWeaponConfig.AbilityRunSpeed = 45
 	ShortSwordWeaponConfig.ProjectileAnimation = "rbxassetid://10149103707"
 	ShortSwordWeaponConfig.Cooldown = 0.6
 	ShortSwordWeaponConfig.Cost = 200
@@ -23,7 +23,7 @@ ShortSwordWeaponConfig.HumanoidToKill = ("Humanoid")
 	ShortSwordWeaponConfig.ComboResetTimer = 1.5
 	ShortSwordWeaponConfig.HitBoxSize = Vector3.new(10,3,10)
 	ShortSwordWeaponConfig.AbilityName = "FastRun"
-	ShortSwordWeaponConfig.Description = "Feather weight Sword that does minimal damage but is fast. Special Ability allows you to sprint for"..tostring(ShortSwordWeaponConfig.AbilityDebrisTimer).." Seconds, Cooldown: "..tostring(ShortSwordWeaponConfig.AbilityCooldown)
+	ShortSwordWeaponConfig.Description ="Light weight sword Ability: Auguadi speed (Allows the player to move faster for a short time)"
 	-- Animations & Sounds
 	ShortSwordWeaponConfig.SwingAnimations = {
         'rbxassetid://9991697436', --1

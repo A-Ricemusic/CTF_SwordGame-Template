@@ -8,7 +8,7 @@ local UltimateSwordWeaponConfig = {}
 UltimateSwordWeaponConfig.TagName = "UltimateSword"
 UltimateSwordWeaponConfig.DisplayName = "Ultimate Sword"
 UltimateSwordWeaponConfig.HumanoidToKill = ("Humanoid")
-	UltimateSwordWeaponConfig.WalkSpeed = 20
+	UltimateSwordWeaponConfig.WalkSpeed = 27
 	UltimateSwordWeaponConfig.JumpHeight = 12
 	UltimateSwordWeaponConfig.MaxDamage = 15 * mult
 	UltimateSwordWeaponConfig.MinDamage = 15 * mult
@@ -24,7 +24,7 @@ UltimateSwordWeaponConfig.HumanoidToKill = ("Humanoid")
 	UltimateSwordWeaponConfig.ComboResetTimer = 1.2
 	UltimateSwordWeaponConfig.HitBoxSize = Vector3.new(15,5,10)
 	UltimateSwordWeaponConfig.AbilityName = "Projectile"
-	UltimateSwordWeaponConfig.Description = "The Best Sword! Ability: Fire Ball with BaseDamage: "..tostring(UltimateSwordWeaponConfig.AbilityDamage)..", Cooldown: "..tostring(UltimateSwordWeaponConfig.AbilityCooldown)
+	UltimateSwordWeaponConfig.Description = "The Best Sword! Ability: Fire of a god (Shoots a fast and powerful Fireball)"
 
 	-- Animations & Sounds
 	UltimateSwordWeaponConfig.SwingAnimations = {
