@@ -229,7 +229,6 @@ local WeaponsService = {Client = {}}
 					ProximityPrompt.ObjectText = WeaponConfig.Description
 					ProximityPrompt.GamepadKeyCode = Enum.KeyCode.DPadUp
 					ProximityPrompt.KeyboardKeyCode = Enum.KeyCode.C
-					ProximityPrompt.HoldDuration = 1
 					ProximityPrompt.Triggered:Connect(function(player)
 						if not player then return end
 						local Character = player.Character

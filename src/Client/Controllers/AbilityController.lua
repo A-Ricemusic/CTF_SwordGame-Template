@@ -5,7 +5,7 @@
 
 
 local AbilityController = {}
-
+local UserInputService = game:GetService("UserInputService")
 function AbilityController:Start()
     local AbilityService = self.Services.AbilityService
     function AbilityController.Ability(WeaponConfig)
@@ -17,8 +17,11 @@ function AbilityController:Start()
             Humanoid.WalkSpeed = 2
             local Mouse = game.Players.LocalPlayer:GetMouse()
             local MouseDirectionVector = Mouse.UnitRay.Direction
+            if not UserInputService.GamepadEnabled and not UserInputService.KeyboardEnabled and not UserInputService.VREnabled then
+               MouseDirectionVector = Character.PrimaryPart.CFrame.LookVector
+            end
             AbilityService:Projectile(WeaponConfig,MouseDirectionVector)
-            wait(0.1)
+            task.wait(0.1)
             Humanoid.WalkSpeed = OriginalWalk
         end
 
