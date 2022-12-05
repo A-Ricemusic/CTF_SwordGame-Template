@@ -95,10 +95,12 @@ function PlayerManagerService:OnPlayerAdded(player)
 		text.BackgroundTransparency = 1
 		text.TextColor = player.TeamColor
 		task.wait()
+		EventService:OnCharacterAddedFireClient(player)
 	end)	
 	
 	-- Check if player should be spawned	
 	if PlayersCanSpawn then
+		task.wait(Configurations.RESPAWN_TIME)
 		player:LoadCharacter()
 		EventService:OnCharacterAddedFireClient(player)
 	else

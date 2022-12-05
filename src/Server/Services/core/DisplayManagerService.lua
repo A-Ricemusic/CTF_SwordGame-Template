@@ -52,7 +52,7 @@ function DisplayManagerService:MapVotingGui(player)
 	MapVoteGui.Name = "MapVoteGui"
 	local votingFrame = Instance.new("Frame",MapVoteGui)
 	votingFrame.Position = UDim2.new(0.2,0,0.2,0)
-	votingFrame.Size = UDim2.new(0.7,0,0.7,0)
+	votingFrame.Size = UDim2.new(0.9,0,0.9,0)
 	votingFrame.BackgroundTransparency = 0.8
 	votingFrame.BorderColor3 = Color3.new()
 	local uiConstraint = Instance.new("UIAspectRatioConstraint",votingFrame)
