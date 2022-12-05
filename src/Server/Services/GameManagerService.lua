@@ -213,7 +213,7 @@ end
 
 --main 
 function GameManagerService:Start()
-task.wait(5)
+task.wait(3)
 GameManagerService:Initialize()
 task.wait(2)
 game.Players.PlayerAdded:Connect(function(player)

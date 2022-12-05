@@ -39,9 +39,17 @@ function EventController:Start()
     end)
     EventService.OnCharacterAdded:Connect(function()
         ContextActionServiceController:OnCharacterAdded()
-        WeaponController:OnCharacterAdded()
+    end)
+  EventService.SwordSetUp:Connect(function(WeaponTag)
+        self.Controllers.WeaponController:OnSetUp(WeaponTag)
     end)
 
+    EventService.Unbind:Connect(function(WeaponTag)
+        self.Controllers.WeaponController:UnbindAction()
+    end)
+	
 end
+
+
 
 return EventController

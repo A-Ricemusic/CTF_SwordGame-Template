@@ -36,6 +36,14 @@ function EventService:OnCharacterAddedFireClient(player)
     self:FireClient("OnCharacterAdded",player)
 end
 
+function EventService:FireSwordSetUpClient(plr,WeaponTag)
+    self:FireClient("SwordSetUp", plr, WeaponTag)
+end
+
+function EventService:FireUnbindActions(plr)
+    self:FireClient("Unbind", plr)
+end
+
 
 
 
@@ -137,6 +145,8 @@ function EventService:Init()
     self:RegisterClientEvent("DisplayWaitingForOtherPlayers")
     self:RegisterClientEvent("ResetMouseIcon")
     self:RegisterClientEvent("OnCharacterAdded")
+    self:RegisterClientEvent("SwordSetUp")
+	self:RegisterClientEvent("Unbind")
 end
 
 

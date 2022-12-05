@@ -67,11 +67,12 @@ function PlayerManagerService:OnPlayerAdded(player)
 	
 	-- Add player to team and configure Gui
 	TeamManagerService:AssignPlayerToTeam(player)
-	player.CharacterAdded:connect(function(character)
+	player.CharacterAdded:Connect(function(character)
 		character:WaitForChild('Humanoid').Died:connect(function()
 			task.wait(Configurations.RESPAWN_TIME)
 			if GameRunning then
 				player:LoadCharacter()
+				EventService:OnCharacterAddedFireClient(player)
 			end
 		end)
 		local character = player.Character
@@ -94,12 +95,12 @@ function PlayerManagerService:OnPlayerAdded(player)
 		text.BackgroundTransparency = 1
 		text.TextColor = player.TeamColor
 		task.wait()
-		EventService:OnCharacterAddedFireClient(player)
 	end)	
 	
 	-- Check if player should be spawned	
 	if PlayersCanSpawn then
 		player:LoadCharacter()
+		EventService:OnCharacterAddedFireClient(player)
 	else
 		DisplayManagerService:StartIntermission(player)
 	end	
@@ -124,9 +125,11 @@ function PlayerManagerService:ClearPlayerScores()
 	end
 end
 
-function PlayerManagerService:LoadPlayers()	
+function PlayerManagerService:LoadPlayers()
+	local EventService = PlayerManagerService:LoadEvents()	
 	for _, player in ipairs(Players:GetPlayers()) do
 		player:LoadCharacter()
+		EventService:OnCharacterAddedFireClient(player)
 	end
 end
 
