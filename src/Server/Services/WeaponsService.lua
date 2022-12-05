@@ -1,3 +1,4 @@
+local UserInputService = game:GetService("UserInputService")
 -- Weapons Service
 -- Username
 -- October 25, 2022
@@ -6,7 +7,7 @@
 
 
 CollectionService = game:GetService("CollectionService")
-
+UserInputService = game:GetService("UserInputService")
 local WeaponsService = {Client = {}}
 			--make DI
 
@@ -155,28 +156,28 @@ local WeaponsService = {Client = {}}
 				return ObjModel
 			end
 
-			function WeaponsService.Client:HitBox(Player,WeaponTag,HitBoxSize)
+			function WeaponsService.Client:HitBox(player,WeaponTag,HitBoxSize)
 				local Hitbox = Instance.new("Part")
 				Hitbox.Name = WeaponTag
 				game:GetService("CollectionService"):AddTag(Hitbox,"Weapon")
 				local ObjectValue = Instance.new('ObjectValue')
 				ObjectValue.Name = "Creator"
 				ObjectValue.Parent = Hitbox
-				ObjectValue.Value = Player
+				ObjectValue.Value = player
 				Hitbox.Size = HitBoxSize
-				Hitbox.CFrame = Player.Character.PrimaryPart.CFrame * CFrame.new(0,0,-5)
+				Hitbox.Position = player.Character.PrimaryPart.Position + (player.Character.PrimaryPart.CFrame.LookVector * 5)
 				Hitbox.Anchored = true
 				Hitbox.CanCollide = false
 				Hitbox.CastShadow = false
-				Hitbox.Transparency = .6
+				Hitbox.Transparency = 1
 				Hitbox.Material = Enum.Material.ForceField
 				Hitbox.CanQuery = false
 				Hitbox.Parent = workspace
-				game:GetService('Debris'):AddItem(Hitbox,0.2)
+				game:GetService('Debris'):AddItem(Hitbox,0.5)
 				Hitbox.Destroying:Connect(function()
 					game:GetService("CollectionService"):RemoveTag(Hitbox,"Weapon")
 				end)
-
+				
 			end
 
 			function WeaponsService.Client:SwordSetUp(plr,WeaponTag)
@@ -288,7 +289,11 @@ function WeaponsService:Start()
 				if CollectionService:HasTag(descendant,'Ability') then
 					Damage = WeaponConfig.AbilityDamage
 				end
-				Enemy:TakeDamage(Damage)
+				local mobileAddedDamage = 0
+				if not UserInputService.GamepadEnabled and not UserInputService.KeyboardEnabled and not UserInputService.VREnabled then
+					mobileAddedDamage = 15
+				 end
+				Enemy:TakeDamage(Damage + mobileAddedDamage)
 				--self.Services.Core.PlayerManagerService:PlayerHit(HitPlayer,Player)
 				--Knockback
 				if HumanoidRootPart:FindFirstChild("BodyVelocity") ~= nil then					

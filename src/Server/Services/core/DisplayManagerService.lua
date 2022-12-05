@@ -1,3 +1,4 @@
+local Debris = game:GetService("Debris")
 -- Display Manager Service
 -- Username
 -- October 26, 2022
@@ -10,7 +11,6 @@ local DisplayManagerService =  {}
 -- ROBLOX Services
 
 local Players = game.Players
-
 -- Local Variables
 
 
@@ -38,8 +38,14 @@ function DisplayManagerService:LoadMapManagerService()
     return MapManagerService
 end
 
+function DisplayManagerService:LoadConfig()
+    local config = self.Shared.Config.GameConfigModule
+    return config
+end
+
 function DisplayManagerService:MapVotingGui(player)
 	local PlayerGui = player:WaitForChild("PlayerGui")
+	local Configurations = DisplayManagerService:LoadConfig()
 	local MapManagerService = DisplayManagerService:LoadMapManagerService()
 	local maps = game:GetService("ReplicatedStorage").Maps:GetChildren()
 	local MapVoteGui = Instance.new("ScreenGui",PlayerGui)
@@ -70,7 +76,7 @@ function DisplayManagerService:MapVotingGui(player)
 				MapManagerService:MapSelect(button.Text)
 		end)
 	end
-
+	Debris:AddItem(MapVoteGui,Configurations.INTERMISSION_DURATION + 3)
 end
 
 
