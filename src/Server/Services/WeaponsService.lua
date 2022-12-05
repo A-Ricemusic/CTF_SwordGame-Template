@@ -239,7 +239,8 @@ local WeaponsService = {Client = {}}
 						if not RightHand then return end
 						local GameItem = FindGameItem(RightHand)
 						if GameItem ~= nil then
-								GameItem:Destroy()
+							CollectionService:RemoveTag(GameItem,"GameItem")
+							GameItem:Destroy()	
 						end
 						CreateObject(PrimaryPart, "successful purchase")
 						WeaponsService.Client:SwordSetUp(player,SwordPawn.Name)

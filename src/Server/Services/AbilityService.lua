@@ -16,9 +16,9 @@ function AbilityService.Client:FastRun(Player, WeaponConfig)
     local Aura = game:GetService("ReplicatedStorage").Effects.FastRun.FastRunAttachment:Clone()
     Aura.Parent = Character.PrimaryPart
     Humanoid.WalkSpeed = WeaponConfig.AbilityRunSpeed
+    Debris:AddItem(Aura,WeaponConfig.AbilityDebrisTimer)
     task.wait(WeaponConfig.AbilityDebrisTimer)
     Humanoid.WalkSpeed = WeaponConfig.WalkSpeed
-    Debris:AddItem(Aura,WeaponConfig.AbilityDebrisTimer)
 end
 
 function AbilityService.Client:ForceField(Player, WeaponConfig)
